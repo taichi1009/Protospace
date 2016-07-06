@@ -1,2 +1,8 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+  <div class="contents row" >
+    <div>Share the prototype</div>
+    <h1>PROTO SPACE</h1>
+    <% @products.each do |tweet| %>
+      <%= render partial: "product", locals: { product: product } %>
+    <% end %>
+  <%= paginate(@products) %>
+</div>
