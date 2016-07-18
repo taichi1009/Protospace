@@ -1,6 +1,24 @@
 class UsersController < ApplicationController
-   def show
+
+  before_action :authenticate_user!
+  before_action :set_user, only: [:show, :edit, :update]
+  def show
       # @nickname = current_user.nickname
-      @products = Tweet.where(user_id: current_user.id).page(params[:page]).per(5).order("created_at DESC")
-    end
+    @products = @user.products.all
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  private
+  def update_params
+  end
+
+  def set_user
+    @user = User.find(params[:id])
+  end
+
 end

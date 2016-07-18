@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :products
   has_many :comments
+  has_many :likes
 
   has_attached_file :avatar,
                       styles:  { medium: "300x300#", thumb: "100x100#" }
