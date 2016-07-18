@@ -51,6 +51,12 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.5)
+    carrierwave (0.11.2)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
+      mimemagic (>= 0.3.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -72,6 +78,8 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    erb2haml (0.1.5)
+      html2haml
     erubis (2.7.0)
     execjs (2.7.0)
     globalid (0.3.6)
@@ -226,9 +234,12 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on
   bootstrap-material-design (= 0.1.4)
+  bootstrap-sass (~> 3.3.6)
   byebug
+  carrierwave
   coffee-rails (~> 4.1.0)
   devise (= 4.1.0)
+  erb2haml
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
